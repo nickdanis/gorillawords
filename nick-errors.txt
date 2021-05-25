@@ -1,1 +1,0 @@
-Error getting puzzle for 1994-06-19: 'charmap' codec can't encode character '\x93' in position 86: character maps to <undefined>
