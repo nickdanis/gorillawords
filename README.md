@@ -7,9 +7,10 @@ Group members:
 - Jonathan Viereck
 
 ## Description
-We scraped 27 years of NYT Crossword puzzle data (Jan 1, 1994-Jan 1, 2021, essentially the entire Will Shortz era to date), collecting clue text, answer text, grid size, number of black blocks, and authors. Every regular NYT Crossword fan knows that Monday is the easiest and the end of the week is most difficult. We extract a number of features from the data based and train several classifiers in an attempt to predict the given day of the week for a given puzzle, as a proxy for difficulty (or other metrics). 
+Every regular NYT Crossword fan knows that Monday is the easiest and the end of the week is most difficult. We extract a number of features from the data based and train several classifiers in an attempt to predict the given day of the week for a given puzzle, as a proxy for difficulty (or other metrics). 
 
-## Feature definitions
+## Feature Selection
+We scraped 27 years of NYT Crossword puzzle data (Jan 1, 1994-Jan 1, 2021, essentially the entire Will Shortz era to date), collecting clue text, answer text, grid size, number of black blocks, and authors, from [https://www.xwordinfo.com/](xwordinfo.com). All totalled, the data set contains 815332 hint/answer pairs. Neither the scraper nor the retrieved dataset are stored in this repository.
 
 ### Average Answer Length
 Average length of each answer.
