@@ -1,5 +1,8 @@
 nick-xword-big.csv 
 nick-xword-big.zip
+jv-xword-full.csv
+jv-xword-new.csv
 local-*
 \.ipynb_checkpoints
 *.pdf
+\features
