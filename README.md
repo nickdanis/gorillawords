@@ -18,23 +18,23 @@ Every regular NYT Crossword fan knows that Monday is the easiest and the end of 
 The [plots](/plots) directory contains explanations on the feature definitions. The [models](/models) directory contains notebooks on the models trained, with cross-validation details. The [scraper](/scraper) directory contains the notebook used for data scraping, in addition to some sample raw data. (The full raw data is not included for copyright reasons.) The CSV files [jv-features.csv](jv-features.csv) and [cc-features.csv](cc-features.csv) contain the feature values for the metadata analysis of the puzzles. 
 
 ## Feature Selection
-We scraped 27 years of NYT Crossword puzzle data (Jan 1, 1994-Jan 1, 2021, essentially the entire Will Shortz era to date), collecting clue/answer text as well as other puzzle metadata such as puzzle size, number of black blocks, and authors, from [https://www.xwordinfo.com/](xwordinfo.com). All totaled, the data set contains 815332 hint/answer pairs. Neither the scraper nor the retrieved dataset are stored in this repository. 
+We scraped 27 years of NYT Crossword puzzle data (Jan 1, 1994-Jan 1, 2021, essentially the entire Will Shortz era to date), collecting clue/answer text as well as other puzzle metadata such as puzzle size, number of black blocks, and authors, from [https://www.xwordinfo.com/](xwordinfo.com). All totaled, the data set contains 815332 clue/answer pairs. Neither the scraper nor the retrieved dataset are stored in this repository. 
 
-The hint/answer pairs and puzzle metadata were used to construct features for the classification models from the set of roughly 10k different crossword puzzles. Puzzle features considered were:
+The clue/answer pairs and puzzle metadata were used to construct features for the classification models from the set of roughly 10k different crossword puzzles. Puzzle features considered were:
 
 | Feature                         | Name in notebook  | Description                                                                     |
 |---------------------------------|-------------------|---------------------------------------------------------------------------------|
 | Block Density                   | `BlockDensity`    | Number of black blocks / total grid size                                        |
 | Average answer length           | `AvgAnswerLength` | Average length of the answers in characters                                     |
-| Average hint length             | `AvgHintLength`   | Average length of the hints in characters                                       |
-| Hint rarity                     | `OtherPuzAns`     | The number of other puzzles that each hint occurs in, averaged for each puzzle  |
-| Percentage of one-word hints    | `PctOneWordHints` | The percentage of the hints that consist of only one word                       |
-| Percentage of wordplay clues    | `PctWP`           | The percentage of hints that end in a question mark                             |
-| Percentage of proper noun clues | `PctPNC`          | The percentage of hints that contain a proper noun (non-initial capital letter) |
+| Average hint length             | `AvgHintLength`   | Average length of the clues in characters                                       |
+| Hint rarity                     | `OtherPuzAns`     | The number of other puzzles that each clue occurs in, averaged for each puzzle  |
+| Percentage of one-word hints    | `PctOneWordHints` | The percentage of the clues that consist of only one word                       |
+| Percentage of wordplay clues    | `PctWP`           | The percentage of clues that end in a question mark                             |
+| Percentage of proper noun clues | `PctPNC`          | The percentage of clues that contain a proper noun (non-initial capital letter) |
 
 Additionally, the following features were computed:
 
-- **Answers in previous puzzles, normed**: The number of times hints puzzles have appeared in *previous* puzzles, by date. 
+- **Answers in previous puzzles, normed**: The number of times a puzzle's clues have appeared in *previous* puzzles, by date. 
 
 - **Perplexity Outliers**: A character bigram language model is trained on all puzzle answers using [nltk](http://www.nltk.org/)'s [Maximum Likelihood Estimation model](https://www.nltk.org/api/nltk.lm.html). [Perplexity](https://en.wikipedia.org/wiki/Perplexity) is calculated for each answer, and the number of **perplexity outliers** (those with perplexity score S where $S > Q_3 + 1.5*IQR$) are counted for each puzzle. The intuition here is that answers that are more rare or obscure should have a higher perplexity score, and that certain days of the week might have on average more ansers of this type than others. Examples of low perplexity answers and high perplexity answers are given below.
 
@@ -90,7 +90,7 @@ The confusion matrices for every model tested are all qualitatively similar to t
 
 - Improve the classification of the individual days based on more sophisticated language models.
 - It would be interesting to find out if the crossword puzzles from other major newspapers follow the same trends. Lastly, 
-- Include a parser for the `.puz` file format 
+- Include a parser for the `.puz` file format to allow read-in and classification of new puzzles. 
 
 ## Acknowledgements
 
