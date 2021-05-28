@@ -64,7 +64,7 @@ Note that perplexity isn't (necessarily) affected by answer length, but rather t
 ![plot](plots/OtherPuzAns.png)
  
 
-- **Bag of Words** and **Term frequency - Inverse document frequency (tf-idf)**: Each puzzle was considered as a documents by joining all its hints into a single string, and were represented with Bag-of-words and tf-idf vectors using the `sklearn` functions `CountVectorizer()` and `TfidfVectorizer()`.
+- **Bag of Words** and **Term frequency - Inverse document frequency (tf-idf)**: Each puzzle was considered as a document by joining all of its hints into a single string and was then represented with Bag-of-words and tf-idf vectors using the `sklearn` functions `CountVectorizer()` and `TfidfVectorizer()`.
 
 ## Models
 
@@ -74,7 +74,7 @@ Note that perplexity isn't (necessarily) affected by answer length, but rather t
 
 ## Results
 
-Testing accuracies for classification on metadata can be compared to the bag-of-words and tf-idf classification models. In both cases testing accuracies were around 50%, compared to random guessing of about 15%
+Testing accuracies for classification on metadata can be compared to the bag-of-words and tf-idf classification models. In both cases, testing accuracies were around 50%, compared to random guessing of about 15%
 
 Metadata            |  Bag of Words & tf-idf
 :-------------------------:|:-------------------------:
