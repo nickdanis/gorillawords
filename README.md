@@ -29,11 +29,23 @@ Additionally we computed
 
 ND/CC For the features ... we considered KNN, Random Forest ..
 
-JV for the Bag of Words and tfidf models, we considered linear SVM, random forest, boosted decision tree, and feed-forward neural network models. The Linear SVM model achieved the highest accuracy of 52%.
+JV for the Bag of Words and tfidf models, we considered linear SVM, random forest, boosted decision tree, and feed-forward neural network models. 
 
 ## Results
 
-Sunday was by far the easiest for the classifiers, with a true positive rate consistently above 90%. Friday and Saturday were difficult to separate from each other, but easy to separate from Monday, Tuesday, Wednesday, Thursday, which were also difficult to separate from each other.
+Testing accuracies for the bag-of-words and tf-idf classification models were around 50%, compared to random guessing of about 15%
+
+![accs](plots/bow_tfidf_acc.png)
+
+Out of the models tested, the linear SVM model on tf-idf vectors achieved the highest accuracy of 52.5%.
+
+![svm_tfidf](plots/tfidf_SVM_cmat.png)
+
+Sunday was by far the easiest to classify, with a true positive rate consistently above 90%. Friday and Saturday were difficult to separate from each other, but easy to separate from Monday, Tuesday, Wednesday, Thursday, which were also difficult to separate from each other. 
+
+For the models tested on puzzle metadata, the same irreducibility is observed.
+
+
 
 ## Code
 
