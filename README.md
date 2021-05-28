@@ -37,7 +37,7 @@ Testing accuracies for the bag-of-words and tf-idf classification models were ar
 
 Metadata            |  Bag of Words & tf-idf
 :-------------------------:|:-------------------------:
-![meta_accs](metadata_accs.png)  |  ![accs](plots/bow_tfidf_acc.png)
+![meta_accs](plots/metadata_accs.png)  |  ![accs](plots/bow_tfidf_acc.png)
 
 Out of the models tested, the linear SVM model on tf-idf vectors achieved the highest accuracy of 52.5%.
 
