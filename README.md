@@ -33,7 +33,7 @@ Additionally we computed
 
 1. (ND/CC) Using the features computed from puzzle metadata, cross-validation was used to determine the most relavent subset of features for fitting K nearest neighbors, decision tree, and random forest models.
 
-2. (JV) Using the Bag of Words and tfidf vector representations, we considered linear SVM, random forest, boosted decision tree, and feed-forward neural network models to classify the data.
+2. (JV) Using the Bag of Words and tfidf vector representations, we considered linear SVM, random forest, boosted decision tree, and feed-forward neural network models to classify the data, using cross-validation for optimization of decision tree and neural network hyperperameters. 
 
 ## Results
 
