@@ -1,6 +1,8 @@
 # Predicting difficulty in NY Times Crossword puzzles
 
-<img src="logo.png" width="300">
+<p align="center">
+	<img src="logo.png" width="300">
+</p>
 
 ## [Erdős Code May 2021 Bootcamp](https://www.erdosinstitute.org/code) Final Project
 Group members:
