@@ -35,7 +35,9 @@ JV for the Bag of Words and tfidf models, we considered linear SVM, random fores
 
 Testing accuracies for the bag-of-words and tf-idf classification models were around 50%, compared to random guessing of about 15%
 
-![accs](plots/bow_tfidf_acc.png)
+Metadata            |  Bag of Words & tf-idf
+:-------------------------:|:-------------------------:
+![meta_accs](metadata_accs.png)  |  ![accs](plots/bow_tfidf_acc.png)
 
 Out of the models tested, the linear SVM model on tf-idf vectors achieved the highest accuracy of 52.5%.
 
