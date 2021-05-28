@@ -55,9 +55,14 @@ Note that perplexity isn't (necessarily) affected by answer length, but rather t
 
 ### Illustrative examples
 
-Average answer length            |  Hint rarity
-:-------------------------:|:-------------------------:
-![plot](plots/AvgAnswerLength.png)  |  ![plot](plots/OtherPuzAns.png)
+#### Average answer length            
+
+![plot](plots/AvgAnswerLength.png)
+
+#### Hint rarity
+
+![plot](plots/OtherPuzAns.png)
+ 
 
 - **Bag of Words** and **Term frequency - Inverse document frequency (tf-idf)**: Each puzzle was considered as a documents by joining all its hints into a single string, and were represented with Bag-of-words and tf-idf vectors using the `sklearn` functions `CountVectorizer()` and `TfidfVectorizer()`.
 
