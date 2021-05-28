@@ -1,5 +1,7 @@
 # Predicting difficulty in NY Times Crossword puzzles
 
+![logo](logo.png)
+
 ## [Erdős Code May 2021 Bootcamp](https://www.erdosinstitute.org/code) Final Project
 Group members:
 - Caitlin Carpenter
