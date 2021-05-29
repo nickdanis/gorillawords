@@ -84,12 +84,12 @@ Out of the models using BoW/tf-idf tested, the linear SVM model on tf-idf vector
 
 ![svm_tfidf](plots/tfidf_SVM_cmat.png)
 
-The confusion matrices for every model tested are all qualitatively similar to the one above. Weekly puzzles can be broken up into three  irreducible categories: (1) Sunday was by far the easiest to classify, which is unsurprising given that Sunday puzzles are larger and contain more information than puzzles from other days of the week (2) Friday and Saturday were difficult to separate from each other, but easy to separate from (3) Monday, Tuesday, Wednesday, Thursday, which were also difficult to separate from each other. 
 
 Among the metadata models, most achieved similar accuracies depending sligtly on feature selection. Cross validation was performed to select the best tree depth as well as the features themselves. For the model shown below, the features used were `BlockDensity`,`OtherPuzAns`,`AvgAnswerLength`,`PctWP`, and `PctPNC`.
 
 ![randomforest](models/caitlin-randomforest.png)
 
+The confusion matrices for every model tested are all qualitatively similar to the ones above. Weekly puzzles can be broken up into three  irreducible categories: (1) Sunday was by far the easiest to classify, which is unsurprising given that Sunday puzzles are larger and contain more information than puzzles from other days of the week (2) Friday and Saturday were difficult to separate from each other, but easy to separate from (3) Monday, Tuesday, Wednesday, Thursday, which were also difficult to separate from each other. 
 
 ## Next steps
 
