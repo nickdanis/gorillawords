@@ -80,11 +80,16 @@ Metadata            |  Bag of Words & tf-idf
 :-------------------------:|:-------------------------:
 ![meta_accs](plots/metadata_accs.png)  |  ![accs](plots/bow_tfidf_acc.png)
 
-Out of the models tested, the linear SVM model on tf-idf vectors achieved the highest accuracy of 52.5%. 
+Out of the models using BoW/tf-idf tested, the linear SVM model on tf-idf vectors achieved the highest accuracy of 52.5% . 
 
 ![svm_tfidf](plots/tfidf_SVM_cmat.png)
 
 The confusion matrices for every model tested are all qualitatively similar to the one above. Weekly puzzles can be broken up into three  irreducible categories: (1) Sunday was by far the easiest to classify, which is unsurprising given that Sunday puzzles are larger and contain more information than puzzles from other days of the week (2) Friday and Saturday were difficult to separate from each other, but easy to separate from (3) Monday, Tuesday, Wednesday, Thursday, which were also difficult to separate from each other. 
+
+Among the metadata models, most achieved similar accuracies depending sligtly on feature selection. Cross validation was performed to select the best tree depth as well as the features themselves. For the model shown below, the features used were `BlockDensity`,`OtherPuzAns`,`AvgAnswerLength`,`PctWP`, and `PctPNC`.
+
+![randomforest](models/caitlin-randomforest.png)
+
 
 ## Next steps
 
